@@ -234,3 +234,7 @@ code {
 #to-do pre {
     line-height: 24px;
 }
+
+#hard b {
+    font-size: 72px;
+}

@@ -14,6 +14,7 @@
     <link href="http://fonts.googleapis.com/css?family=Oxygen|PT+Mono" rel="stylesheet" />
 
     <link href="css/js-testing-presentation.css" rel="stylesheet" />
+    <link type="text/css" href="css/code-highlighter.css" rel="stylesheet" />
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -33,7 +34,7 @@
         <h2>Completing the BDD Circle in Web Development</h2>
     </div>
 
-    <div id="engineer" class="step" data-x="0" data-y="0 data-z="0" data-rotate-x="-90" data-rotate-y="-90" data-rotate="-90">
+    <div id="engineer" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="-90" data-rotate-y="-90" data-rotate="-90">
         <span>You are an engineer.</span>
     </div>
 
@@ -65,14 +66,14 @@
     </div>
         
     <div id="not-java" class="step" data-x="0" data-y="3000" data-z="1500" data-rotate-x="90" data-rotate-y="0" data-rotate="0">
-        <p>It's not <b>Java</b>, and a lot more powerful than the word <b>Script</b> implies.</p>
+        <p>It's not <b>Java</b>, and it's a lot more powerful than the word <b>Script</b> implies.</p>
     </div>
         
     <div id="but" class="step" data-x="1500" data-y="3000" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate="0">
         <p>But you know that.</p>
     </div>
         
-    <div id="hard" class="step" data-x="1500" data-y="3000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+    <div id="hard" class="step" data-x="1500" data-y="3000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="90">
         <p>Writing <b>quality</b> JavaScript is hard...</p>
     </div>
         
@@ -83,7 +84,7 @@
     <div id="closures" class="step" data-x="3000" data-y="3000" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate="90">
         <p>Wrap your code in <a href="http://www.bennadel.com/blog/1482-A-Graphical-Explanation-Of-Javascript-Closures-In-A-jQuery-Context.htm">closures</a>...</p>
         <pre>
-            <code>
+            <code class="javascript">
 (function ($) {
     // Way to go, boss!
 }(jQuery));
@@ -94,7 +95,7 @@
     <div id="namespace" class="step" data-x="3000" data-y="3000" data-z="1500" data-rotate-x="90" data-rotate-y="0" data-rotate="90">
         <p><a href="http://javascriptweblog.wordpress.com/2010/12/07/namespacing-in-javascript/">Namespace</a> your functions...</p>
         <pre>
-            <code>
+            <code class="javascript">
 var AwesomeNS = {};
 
 AwesomeNS.rockstar = function () {
@@ -107,7 +108,7 @@ AwesomeNS.rockstar = function () {
     <div id="function-level-scope" class="step" data-x="3000" data-y="3000" data-z="1500" data-rotate-x="0" data-rotate-y="-90" data-rotate="90">
         <p>Decalre your vars up top...</p>
         <pre>
-            <code>
+            <code class="javascript">
 AwesomeNS.rockstar = function () {
     var thisIsHow = "we do it";
 
@@ -121,11 +122,58 @@ AwesomeNS.rockstar = function () {
         <p>And what <b>not</b> to do...</p>
     </div>
         
+    <div id="with" class="step" data-x="3000" data-y="3000" data-z="3000" data-rotate-x="0" data-rotate-y="-180" data-rotate="90">
+        <p>Don't use <a href="http://www.yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/">with</a>...</p>
+        <pre>
+            <code class="javascript">
+bad = "hehe";
+with (theNS) {
+    // is this theNS.bad or bad.
+    // Who knows!
+    bad = "oh noes";
+}
+            </code>
+        </pre>
+    </div>
+        
+    <div id="eval" class="step" data-x="3000" data-y="1500" data-z="3000" data-rotate-x="0" data-rotate-y="-180" data-rotate="90">
+        <p>Avoid <a href="http://wingolog.org/archives/2012/01/12/javascript-eval-considered-crazy">eval</a>...</p>
+        <pre>
+            <code class="javascript">
+var foo = {}, property, value;
+
+foo.bar = "woah";
+property = "bar";
+// Way to slow down processing, bro!
+value = eval("foo." + property);
+            </code>
+        </pre>
+    </div>
+        
+    <div id="globals" class="step" data-x="3000" data-y="1500" data-z="3000" data-rotate-x="90" data-rotate-y="-180" data-rotate="90">
+        <p>Always remember your <a href="http://stackoverflow.com/questions/790558/variable-scope-in-javascript-for-loop">vars</a>...</p>
+        <pre>
+            <code class="javascript">
+function derp() {
+    for (i = 0; i &lt; 10; i++) {
+        // You just modified
+        // the global 'i'!
+    }
+}
+            </code>
+        </pre>
+    </div>
+
+    <div id="but2" class="step" data-x="1500" data-y="1500" data-z="3000" data-rotate-x="90" data-rotate-y="-180" data-rotate="90">
+        <p>But you know that, too.</p>
+    </div>
+
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="7">
     </div>
 
 </div>
 
+<script src="js/clean_tumblr_pre.js"></script>
 <script src="js/impress.js"></script>
 
 <script>impress().init();</script>
