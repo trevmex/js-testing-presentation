@@ -168,8 +168,80 @@ function derp() {
         <p>And that is a <b>very</b> good thing.</p>
     </div>
 
+    <div id="lets-go" class="step" data-x="3000" data-y="6000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+        <p>How to do it:</p>
+        <ul>
+            <li><a href="http://pivotal.github.com/jasmine/">Jasmine</a> (or <a href="http://docs.jquery.com/QUnit">QUnit</a>, <a href="http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript">etc.</a>)</li>
+            <li><a href="http://maven.apache.org/">Maven</a> (or <a href="http://ant.apache.org/">Ant</a>, <a href="http://rake.rubyforge.org/">Rake</a>, <a href="http://en.wikipedia.org/wiki/List_of_build_automation_software">etc.</a>)</li>
+            <li><a href="http://jenkins-ci.org/">Jenkins</a> (or <a href="http://www.urbancode.com/html/products/anthillpro/default.html">AnthillPro</a>, <a href="http://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software">etc.</a>)</li>
+        </ul>
+    </div>
     
+    <div id="jasmine" class="step" data-x="4500" data-y="6000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+        <p><b>Jasmine</b></p>
+        <pre>
+            <code class="javascript">
+NS.greeter = function (name) {
+    return 'Hello ' + name + '!';
+};<br />
+describe('greeter', function () {
+    it('greets me', function () {
+        expect(NS.greeter('Trevor')).toEqual('Hello Trevor!');
+    });
+});
+            </code>
+        </pre>
+    </div>
     
+    <div id="jasmine-callback" class="step" data-x="4500" data-y="6000" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate="0">
+        <p><b>Jasmine with Callbacks</b></p>
+        <pre>
+            <code class="javascript">
+NS.runIfTrevor = function (name, callback) {
+    if (name === 'Trevor') {
+        callback(name);
+    } else {
+        console.log("You aren't Trevor!");
+    }
+};<br />
+describe('runIfTrevor', function () {
+    it('calls callback if Trevor', function () {
+        var callback = jasmine.createSpy();
+        NS.runIfTrevor('Trevor', callback);
+        expect(callback).toHaveBeenCalledWith('Trevor');
+    });
+});            </code>
+        </pre>
+    </div>
+
+    <div id="jasmine-ajax" class="step" data-x="4500" data-y="6000" data-z="0" data-rotate-x="90" data-rotate-y="90" data-rotate="0">
+        <p><b>Jasmine with Ajax</b></p>
+        <pre>
+            <code class="javascript">
+NS.greetUser = function (id) {
+    return $.ajax({
+        data: id,
+        url: 'name.html',
+        success: function (data) {
+            NS.greeter(data.name);
+        }
+    });
+};<br />
+describe('greetUser', function () {
+    it('calls greeter on success', function () {
+        NS.greetUser(1);
+        spyOn(NS, 'greeter');
+        mostRecentAjaxRequest().response({
+            status: 200,
+            responseText: '{"name":"Trevor"}'
+        });
+        expect(NS.greeter).toHaveBeenCalledWith('Trevor');
+    });
+});
+            </code>
+        </pre>
+    </div>
+
     <div id="overview" class="step" data-x="3000" data-y="3000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0" data-scale="10">
     </div>
 

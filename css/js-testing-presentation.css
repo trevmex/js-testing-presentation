@@ -242,3 +242,33 @@ code {
 #especially b {
     font-size: 72px;
 }
+
+#lets-go li {
+    list-style: square inside;
+    font-size: 36px;
+}
+
+#jasmine code {
+    font-size: 18px;
+}
+
+#jasmine pre {
+    line-height: 18px;
+}
+
+#jasmine-callback code {
+    font-size: 18px;
+}
+
+#jasmine-callback pre {
+    line-height: 18px;
+}
+
+#jasmine-ajax code {
+    font-size: 18px;
+}
+
+#jasmine-ajax pre {
+    line-height: 18px;
+}
+
