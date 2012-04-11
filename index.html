@@ -31,24 +31,17 @@
 
 <div id="impress">
 
-    <div id="intro" class="step slide" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+    <div id="intro" class="step slide" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0" data-scale="10">
         <h1>JavaScript Testing</h1>
         <h2>Completing the BDD Circle in Web Development</h2>
+        <div class="speaker-info">
+            Trevor Lalish-Menagh, a guy who wants you to test your code
+            <a href="http://www.twitter.com/#!/trevmex">@trevmex</a><br />
+            <a href="http://trevmex.com">http://www.trevmex.com</a>
+        </div>
     </div>
 
-    <div id="engineer" class="step" data-x="1500" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
-        <span>You are an engineer.</span>
-    </div>
-
-    <div id="quality" class="step" data-x="3000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
-        <span>Engineers produce <b>quality work</b>.</span>
-    </div>
-
-    <div id="what" class="step" data-x="4500" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
-        <span>but, what IS quality?</span>
-    </div>
-
-    <div id="cisq" class="step" data-x="6000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+    <div id="cisq" class="step slide" data-x="15000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0" data-scale="10">
         <p>CISQ: Consortium for IT Software Quality says...</p>
         <ul>
             <li>Reliability</li>
@@ -58,25 +51,49 @@
             <li>Size</li>
         </ul>
     </div>
-    
-    <div id="javascript" class="step" data-x="6000" data-y="1500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
-        <p>You write <b>JavaScript</b></p>
+
+    <div id="but_really" class="step slide" data-x="30000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0" data-scale="10">
+        <p>but really...</p>
+    </div>
+
+     <div id="engineer" class="step" data-x="30000" data-y="0" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate="0" data-scale="10">
+        <span>You are an engineer.</span>
+    </div>
+
+    <div id="quality" class="step" data-x="30000" data-y="0" data-z="0" data-rotate-x="90" data-rotate-y="90" data-rotate="0" data-scale="10">
+        <span>Engineers produce <b>quality work</b>.</span>
+    </div>
+
+     <div id="care" class="step" data-x="-9000" data-y="0" data-z="0" data-rotate-x="90" data-rotate-y="90" data-rotate="0" data-scale="1">
+         <span>Quality work is work that you <b>care about</b>.</span>
+    </div>
+
+     <div id="proud" class="step" data-x="-9000" data-y="0" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate="0" data-scale="1">
+         <span>Work that you are <b>proud to show off</b>.</span>
+    </div>
+
+     <div id="change" class="step" data-x="-9000" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0" data-scale="1">
+         <span>Work that you are <b>not afriad to change</b>.</span>
+    </div>
+
+    <div id="javascript" class="step" data-x="-9000" data-y="1500" data-z="1500" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+        <span>You write</span>
+        <span><b>JavaScript</b>.</span>
     </div>
         
-    <div id="hard" class="step" data-x="4500" data-y="1500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+    <div id="hard" class="step" data-x="-9000" data-y="3000" data-z="3000" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
         <p>Writing <b>quality</b> JavaScript is hard...</p>
     </div>
         
-    <div id="to-do" class="step" data-x="3000" data-y="1500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+    <div id="to-do" class="step" data-x="-9000" data-y="4500" data-z="3000" data-rotate-x="0" data-rotate-y="180" data-rotate="0">
         <p>You have to know what <b>to do</b>...</p>
     </div>
         
-    <div id="namespace" class="step" data-x="1500" data-y="1500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+    <div id="namespace" class="step" data-x="-7500" data-y="4500" data-z="1500" data-rotate-x="0" data-rotate-y="180" data-rotate="90">
         <p><a href="http://javascriptweblog.wordpress.com/2010/12/07/namespacing-in-javascript/">Namespace</a> your functions...</p>
         <pre>
             <code class="javascript">
-var AwesomeNS = {};
-
+var AwesomeNS = {};<br/>
 AwesomeNS.rockstar = function () {
     // Good job, rockstar!
 }
@@ -84,24 +101,35 @@ AwesomeNS.rockstar = function () {
         </pre>
     </div>
         
-    <div id="function-level-scope" class="step" data-x="0" data-y="1500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
-        <p>Decalre your vars up top...</p>
+    <div id="function-level-scope" class="step" data-x="-4500" data-y="4500" data-z="0" data-rotate-x="0" data-rotate-y="180" data-rotate="180">
+        <p>Decalre your <a href="http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting">vars up top</a>...</p>
         <pre>
             <code class="javascript">
 AwesomeNS.rockstar = function () {
-    var thisIsHow = "we do it";
-
+    var thisIsHow = "we do it";<br/>
     // No block scope, here!
 }
             </code>
         </pre>
     </div>
         
-    <div id="not-to-do" class="step" data-x="0" data-y="3000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+    <div id="iife" class="step" data-x="-1500" data-y="4500" data-z="0" data-rotate-x="0" data-rotate-y="180" data-rotate="270">
+        <p>Encapsulate your code in <a href="http://benalman.com/news/2010/11/immediately-invoked-function-expression/">IIFEs</a></p>
+        <pre>
+            <code class="javascript">
+(function () {
+    var giveAHoot = !pollute;<br/>
+    // ...the global namespace!
+}());
+            </code>
+        </pre>
+    </div>
+         
+    <div id="not-to-do" class="step" data-x="-1500" data-y="7500" data-z="1500" data-rotate-x="0" data-rotate-y="180" data-rotate="90">
         <p>And what <b>not</b> to do...</p>
     </div>
         
-    <div id="with" class="step" data-x="1500" data-y="3000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+    <div id="with" class="step" data-x="-1500" data-y="9000" data-z="1500" data-rotate-x="0" data-rotate-y="180" data-rotate="90">
         <p>Don't use <a href="http://www.yuiblog.com/blog/2006/04/11/with-statement-considered-harmful/">with</a>...</p>
         <pre>
             <code class="javascript">
@@ -115,7 +143,7 @@ with (theNS) {
         </pre>
     </div>
         
-    <div id="globals" class="step" data-x="3000" data-y="3000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+    <div id="globals" class="step" data-x="0" data-y="9000" data-z="1500" data-rotate-x="0" data-rotate-y="180" data-rotate="90">
         <p>Always remember your <a href="http://stackoverflow.com/questions/790558/variable-scope-in-javascript-for-loop">vars</a>...</p>
         <pre>
             <code class="javascript">
@@ -129,17 +157,29 @@ function derp() {
         </pre>
     </div>
 
-    <div id="but2" class="step" data-x="4500" data-y="3000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
-        <p>But you know that, too.</p>
+        
+    <div id="eval" class="step" data-x="0" data-y="7500" data-z="1500" data-rotate-x="0" data-rotate-y="180" data-rotate="90">
+        <p>Stop abusing <a href="http://24ways.org/2005/dont-be-eval">eval</a>...</p>
+        <pre>
+            <code class="javascript">
+var property = 'bar';
+var value = eval('foo.' + property);<br />
+value = foo[property]; // Good!
+            </code>
+        </pre>
     </div>
 
-    <div id="because" class="step" data-x="6000" data-y="3000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
+    <div id="but2" class="step" data-x="1500" data-y="7500" data-z="3000" data-rotate-x="0" data-rotate-y="180" data-rotate="90">
+        <p>But you know all that.</p>
+    </div>
+
+    <div id="because" class="step" data-x="1500" data-y="7500" data-z="3000" data-rotate-x="0" data-rotate-y="90" data-rotate="90">
         <p>Because you are a rockstar!</p>
     </div>
 
-    <div id="no" class="step" data-x="6000" data-y="4500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
-        <p>No, you're not.</p>
-        <p>None of us are.</p>
+    <div id="no" class="step" data-x="1500" data-y="9000" data-z="3000" data-rotate-x="0" data-rotate-y="90" data-rotate="0">
+        <p>Come on...</p>
+        <p>None of us are perfect.</p>
     </div>
 
     <div id="we-all" class="step" data-x="4500" data-y="4500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
@@ -147,7 +187,7 @@ function derp() {
     </div>
 
     <div id="especially" class="step" data-x="3000" data-y="4500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
-        <p>Especially <b>JavaScript</b></p>
+        <p>Especially <b>JavaScript</b>.</p>
     </div>
 
     <div id="write-tests" class="step" data-x="1500" data-y="4500" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
@@ -175,6 +215,11 @@ function derp() {
             <li><a href="http://maven.apache.org/">Maven</a> (or <a href="http://ant.apache.org/">Ant</a>, <a href="http://rake.rubyforge.org/">Rake</a>, <a href="http://en.wikipedia.org/wiki/List_of_build_automation_software">etc.</a>)</li>
             <li><a href="http://jenkins-ci.org/">Jenkins</a> (or <a href="http://www.urbancode.com/html/products/anthillpro/default.html">AnthillPro</a>, <a href="http://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software">etc.</a>)</li>
         </ul>
+    </div>
+ 
+    <div id="demo" class="step" data-x="3000" data-y="6000" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate="0">
+        <p>Live Coding Time!!!</p>
+        <p>(I am such a fool...)</p>
     </div>
     
     <div id="jasmine" class="step" data-x="4500" data-y="6000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0">
@@ -242,7 +287,7 @@ describe('greetUser', function () {
         </pre>
     </div>
 
-    <div id="overview" class="step" data-x="3000" data-y="3000" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate="0" data-scale="10">
+    <div id="overview" class="step" data-x="1000" data-y="2000" data-z="0" data-rotate-x="-45" data-rotate-y="-45" data-rotate="-10" data-scale="12">
     </div>
 
 </div>

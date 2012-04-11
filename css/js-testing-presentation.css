@@ -152,7 +152,7 @@ a:focus {
     letter-spacing: -1px;
 }
 
-.slide h1 {
+.slide h1, p {
     display: block;
     font-size: 60px;
     line-height: 72px;
@@ -168,8 +168,21 @@ a:focus {
     margin-top: 100px;
 }
 
+.slide ul {
+    margin-top:50px;
+}
+
+.slide li {
+    list-style: square inside;
+    margin-bottom: 5px;
+}
+
 code {
     font-family: 'PT Mono', Courier, serif;
+}
+
+#intro .speaker-info {
+    margin-top: 50px;
 }
 
 #engineer {
@@ -210,44 +223,47 @@ code {
     text-align: center;
 }
 
-#cisq {
-    width: 700px;
-}
-
-#cisq p {
-    font-size: 50px;
-}
-
-#cisq li {
-    list-style: square inside;
-    font-size: 36px;
-}
-
 #javascript {
     width: 700px;
 }
 
-#to-do code {
-    font-size: 24px;
+code {
+    font-size: 36px;
 }
 
-#to-do pre {
-    line-height: 24px;
+pre {
+    line-height: 36px;
 }
 
-#hard b {
+p.3d {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style:    preserve-3d; /* Y U need this Firefox?! */
+    -ms-transform-style:     preserve-3d;
+    -o-transform-style:      preserve-3d;
+    transform-style:         preserve-3d;
+}
+
+b {
     font-size: 72px;
+    display: inline-block;
+    -webkit-transform: translateZ(40px);
+    -moz-transform:    translateZ(40px);
+    -ms-transform:     translateZ(40px);
+    -o-transform:      translateZ(40px);
+     transform:        translateZ(40px);
+            
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
 }
 
-#especially b {
-    font-size: 72px;
-}
 
 #lets-go li {
     list-style: square inside;
     font-size: 36px;
 }
-
 #jasmine code {
     font-size: 18px;
 }
