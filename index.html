@@ -287,14 +287,22 @@ describe('greetUser', function () {
         </pre>
     </div>
 
-    <div id="overview" class="step" data-x="1000" data-y="2000" data-z="0" data-rotate-x="-45" data-rotate-y="-45" data-rotate="-10" data-scale="12">
+    <div id="overview" class="step website" data-x="1000" data-y="2000" data-z="0" data-rotate-x="-45" data-rotate-y="-45" data-rotate="-10" data-scale="12">
+        <p><a href="http://trevmex.github.com/js-testing-presentation">http://trevmex.github.com/js-testing-presentation</a></p>
     </div>
 
 </div>
 
 <script src="js/impress.js"></script>
 
-<script>impress().init();</script>
+<script>
+    document.addEventListener("impress:stepenter", function (e) {
+        if (e.target.className.match(/.*website.*/) !== null) {
+            e.target.style.display = "block";
+        }
+    }, false);
+    impress().init();
+</script>
 
 </body>
 

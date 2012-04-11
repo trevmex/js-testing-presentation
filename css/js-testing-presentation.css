@@ -227,6 +227,14 @@ code {
     width: 700px;
 }
 
+.website {
+    display: none;
+}
+
+.website p {
+    margin-top: 150px;
+}
+
 code {
     font-size: 36px;
 }
