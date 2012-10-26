@@ -278,7 +278,7 @@ describe('greetUser', function () {
         spyOn(NS, 'greeter');
         mostRecentAjaxRequest().response({
             status: 200,
-            responseText: '{"name":"Trevor"}'
+            responseText: {"name":"Trevor"}
         });
         expect(NS.greeter).toHaveBeenCalledWith('Trevor');
     });
